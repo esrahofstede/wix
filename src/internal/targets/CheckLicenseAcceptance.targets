@@ -5,7 +5,8 @@
 
   <Target
     Name="CheckWix7LicenseAcceptance"
-    BeforeTargets="CoreCompile">
+    BeforeTargets="CoreCompile"
+    Condition=" '$(WixRequireOsmfEula)' == 'true' ">
 
     <ItemGroup>
       <_AcceptEula Include="$(AcceptEula)" />
