@@ -208,7 +208,7 @@
   <Target
     Name="CheckLicenseAcceptance"
     BeforeTargets="CoreCompile"
-    Condition=" '$(AcceptEula)' == '' ">
+    Condition=" '$(AcceptEula)' == '' and '$(WixRequireOsmfEula)' == 'true' ">
 
     <PropertyGroup>
       <WixEulaFile>$(USERPROFILE)\.wix\wix$(WixToolsetMajorVersion)-osmf-eula.txt</WixEulaFile>
